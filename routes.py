@@ -1,11 +1,15 @@
 import os
 
 from flask import Flask, jsonify, request
-from avl_tree import AVLTree
+from api.avl_tree import AVLTree
 import pandas as pd
 
 app = Flask(__name__)
 avl_tree = AVLTree()
+
+@app.router('/')
+def index():
+    return "Api usando Flask."
 
 
 @app.route('/api/batch-data', methods=['POST'])
@@ -64,4 +68,4 @@ def group_info():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
