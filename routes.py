@@ -9,7 +9,7 @@ avl_tree = AVLTree()
 
 @app.route('/')
 def index():
-    return "Api usando Flask."
+    return "Bienvenidos a nuestra aplicacion con Flask"
 
 
 @app.route('/api/batch-data', methods=['POST'])
