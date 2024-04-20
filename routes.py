@@ -7,7 +7,7 @@ import pandas as pd
 app = Flask(__name__)
 avl_tree = AVLTree()
 
-@app.router('/')
+@app.route('/')
 def index():
     return "Api usando Flask."
 
